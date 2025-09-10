@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8080
 const client = require('./db/client')
 const coffeeShopRouter = require('./api/coffeeShopRoutes')
 const userRouter = require('./api/userProfileRoutes')
-
+const productRatingRouter = require('./api/productRatingRoutes')
 
 
 app.get("/", async(req, res, next)=>{

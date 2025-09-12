@@ -1,7 +1,7 @@
 const express = require('express')
 const productRatingRouter = express.Router()
 module.exports = productRatingRouter
-const {createRating, updateRating, deleteRating} = require('../db/queries/productrating')
+const {updateRating, createRating, deleteRating} = require('../db/queries/productratings')
 
 productRatingRouter.put("/", async(req,res,next)=>{
     res.send(await updateRating())

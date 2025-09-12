@@ -1,12 +1,12 @@
 const client = require('../client')
 
-const getUserRatings = async(user_id, product_id, coffeeshop_id, rating)=>{
+const getUserRatings = async(user_id)=>{
     const SQL =`
         SELECT *
         FROM productratings
-        where id = $1
+        where user_id = $1;
     `
-    const response = await client.query(SQL, [user_id, product_id, coffeeshop_id, rating])
+    const response = await client.query(SQL, [user_id])
     return response.rows
 }
 

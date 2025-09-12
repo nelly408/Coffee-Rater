@@ -4,7 +4,8 @@ module.exports = userRouter
 const {getUserRatings} = require('../db/queries/userprofile')
 
 
-//base.com/user/:id
-userRouter.get("/:id", async(req,res,next)=>{
-    res.send(await getUserRatings())
+//base.com/productratings/:id
+userRouter.get("/:user_id", async(req,res,next)=>{
+    const user_id = req.params.user_id
+    res.send(await getUserRatings(user_id))
 })

@@ -4,7 +4,7 @@ const getAllCoffeeshops = async()=>{
     const SQL =`
         SELECT *
         FROM coffeeshops
-        JOIN productratings on coffeeshops.id = coffeeshops_id;
+        JOIN productratings on coffeeshops.id = coffeeshop_id;
     `
     const response = await client.query(SQL)
     return response.rows

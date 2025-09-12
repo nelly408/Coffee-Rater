@@ -19,9 +19,10 @@ const init = async()=>{
 client.connect()
 // await createTables()
 
-console.log('data seeded')
+// console.log('data seeded')
 app.use("/coffeeshops", coffeeShopRouter)
-app.use("/users", userRouter)
+app.use("/userprofile", userRouter)
+app.use("/productratings", productRatingRouter)
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
